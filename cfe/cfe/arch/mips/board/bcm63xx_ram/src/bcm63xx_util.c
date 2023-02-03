@@ -89,7 +89,7 @@ static PARAMETER_SETTING gBootParam[] =
 {
     // prompt name                  Error Prompt    Boot Define Boot Param  Validation function
     {"Board IP address                  :", IP_PROMPT       , "e=",
-        "192.168.1.1", 28, parseIpAddr, TRUE}, // index 0
+        "192.168.1.10", 28, parseIpAddr, TRUE}, // index 0
     {"Host IP address                   :", IP_PROMPT       , "h=",
         "192.168.1.100", 15, parseIpAddr, TRUE}, // index 1
     {"Gateway IP address                :", IP_PROMPT       , "g=",
