@@ -49,10 +49,11 @@
 
 int xvsprintf(char *outbuf,const char *templat,va_list marker);
 int xsprintf(char *buf,const char *templat,...);
-#if CFG_RAMAPP
+#if CFG_RAMAPP || MIPS_BARE_APP
 int xprintf(const char *templat,...);
 #else
 #define xprintf(...)
+
 #endif
 
 extern int (*xprinthook)(const char *);
