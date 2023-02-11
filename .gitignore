@@ -19,3 +19,4 @@ cfe/build/broadcom/bcm63xx_rom/flashimg.S
 #Other
 *.bak
 
+.vscode/settings.json
