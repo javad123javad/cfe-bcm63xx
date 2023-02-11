@@ -96,7 +96,7 @@ static int console_write(unsigned char *buffer,int length)
 	}
 
     if (res < 0) return -1;
-    return 0;			 
+    return 0;
 }
 
 
@@ -178,14 +178,17 @@ void appletmain(unsigned long handle,unsigned long vector,
     conhandle = cfe_getstdhandle(CFE_STDHANDLE_CONSOLE);
 
     str[0] = 0;
+    char * str_banner = "Hello JAVAD Rahimi\n";
     cfe_getenv("BOOT_CONSOLE",str,sizeof(str));
-
+    console_xprint(str_banner);
+    xsprintf(str_banner,"%s","T");
     xprintf("Hello, world.  Console = %s\n",str);
     xprintf("API Seal = %08X\n",(int)seal);
     xprintf("Entrypoint=%08X  Handle=%08X\n",(int)ept,(int)handle);
     idx = 0;
 
     cfe_getfwinfo(&info);
+    
     xprintf("CFE version:    %08llX\n",info.fwi_version);
     xprintf("Flags:          %08llX\n",info.fwi_flags);
     xprintf("Total memory:   %08llX\n",info.fwi_totalmem);

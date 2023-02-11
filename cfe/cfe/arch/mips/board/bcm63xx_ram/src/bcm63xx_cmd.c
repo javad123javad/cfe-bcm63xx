@@ -103,7 +103,7 @@ int yesno(void)
 // erase Persistent sector
 static int ui_cmd_erase_psi(ui_cmdline_t *cmd,int argc,char *argv[])
 {
-    printf("Erase persisten storage data?");
+    printf("Erase persistent storage data?");
     if (yesno())
         return -1;
 
@@ -737,7 +737,7 @@ static int ui_init_bcm63xx_cmds(void)
 	       ui_cmd_run_program,
 	       NULL,
 	       "Run program from flash image or from host depend on [f/h] flag",
-	       "eg. r [[hostip:]filenaem]<cr> if no filename, use the file name in 'Default host run file name'",
+	       "eg. r [[hostip:]filename]<cr> if no filename, use the file name in 'Default host run file name'",
 	       "");
 
     cmd_addcmd("e",
